@@ -13,6 +13,7 @@ type turtle struct {
 }
 
 func main() {
+    port := os.Getenv("PORT")
 	router := chi.NewRouter()
     donatelo := turtle{Name: "Donatelo", Age: 100, Color: "purple"}
 	router.Get("/", func(writer http.ResponseWriter, router *http.Request) {

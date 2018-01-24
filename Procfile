@@ -1,1 +1,1 @@
-web: golang-intro
+web: helloworld

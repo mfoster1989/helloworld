@@ -1,6 +1,7 @@
 package main
 
 import (
+    "os"
     "encoding/json"
 	"net/http"
 	"github.com/go-chi/chi"
@@ -20,5 +21,5 @@ func main() {
         writer.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(writer).Encode(donatelo)
 	})
-	http.ListenAndServe(":3000", router)
+	http.ListenAndServe(":"+port, router)
 }
